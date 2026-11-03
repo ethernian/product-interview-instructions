@@ -34,3 +34,6 @@ Project instructions apply across chats within that project. See the [official C
 ## Contribute
 
 Keep prompt changes focused and easy to review. Describe what changed, why it helps, and include an example conversation when useful.
+
+Keep `Product-Interview-Instructions.md` under 5,000 characters, including spaces and line breaks. 
+As for now, ChatGPT Project Instructions have an observed, but undocumented limit of approximately 8,000 characters.
