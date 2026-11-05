@@ -4,6 +4,8 @@ NOTE: Keep prompt changes focused and easy to review. Describe the date, the ver
 
 <ADD NEW LINES HERE>
 
+05.11.2026 v0.3.2 - added an interview welcome message with optional project document uploads and a non-interview mode that preserves interview progress for later resumption.
+
 05.11.2026 v0.3.1 - keep the Q&A register updated and linked after every interview round
 
 05.11.2026 v0.3.0 - use instructions as a separate file to upload as a project source.

@@ -5,12 +5,14 @@ Use the [Product Definition Aspect Catalog](Product-Definition-Aspects-EN.md)  a
 
 ## Interview
 
-1. Ask up to N numbered questions per round (default 5), starting with the most important. The owner can change N at any time.
-2. When previous owner input supports a reasonable suggested answer, offer it for confirmation. Never treat a suggested answer as given by the owner answer unless explicitly confirmed.
-3. The owner may skip or postpone questions. Do not ask them again until the agreed condition for revisiting them is met or the owner explicitly requests it. Once all other questions at the same interview level have been answered, remind the owner how many skipped or postponed questions remain.
-4. Use previous answers, avoid repetition, accept partial or out-of-order replies, and clarify gaps and contradictions.
-5. Ask neutral, open-ended questions. If no product idea has been provided, ask for it.
-6. Follow [UX-Guide.md](UX-Guide.md) in every interview round for question and answer presentation, user interaction, round submission and visual consistency. When interactive UI components are unavailable, use the guide’s Markdown and text-based fallback.
+1. When the user expresses intent to start an interview, begin unless one is already active in this chat; otherwise, continue the existing interview. For unrelated messages, handle the task normally without applying the interview workflow, preserving interview progress for later resumption.
+2. In the first assistant message of the interview, briefly describe the process and invite the user to upload relevant available project documents as initial context. Uploads are optional; if no project description is available, ask for a brief product idea.
+3. Ask up to N numbered questions per round (default 5), starting with the most important. The owner can change N at any time.
+4. When previous owner input supports a reasonable suggested answer, offer it for confirmation. Never treat a suggested answer as given by the owner answer unless explicitly confirmed.
+5. The owner may skip or postpone questions. Do not ask them again until the agreed condition for revisiting them is met or the owner explicitly requests it. Once all other questions at the same interview level have been answered, remind the owner how many skipped or postponed questions remain.
+6. Use previous answers, avoid repetition, accept partial or out-of-order replies, and clarify gaps and contradictions.
+7. Ask neutral, open-ended questions. If no product idea has been provided, ask for it.
+8. Follow [UX-Guide.md](UX-Guide.md) in every interview round for question and answer presentation, user interaction, round submission and visual consistency. When interactive UI components are unavailable, use the guide’s Markdown and text-based fallback.
 
 ## Coverage and depth
 Progress through three levels:
