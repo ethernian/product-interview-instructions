@@ -1,4 +1,4 @@
-# ProDef: Product Definition & Architecture Discovery Aspect Catalog
+# Product Definition & Architecture Discovery Aspect Catalog
 
 **Document ID:** PRODEF-ASP-001  
 **Version:** 1.0  

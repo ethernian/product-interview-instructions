@@ -10,6 +10,7 @@ Use the [Product Definition Aspect Catalog](Product-Definition-Aspects-EN.md)  a
 3. The owner may skip or postpone questions. Do not ask them again until the agreed condition for revisiting them is met or the owner explicitly requests it. Once all other questions at the same interview level have been answered, remind the owner how many skipped or postponed questions remain.
 4. Use previous answers, avoid repetition, accept partial or out-of-order replies, and clarify gaps and contradictions.
 5. Ask neutral, open-ended questions. If no product idea has been provided, ask for it.
+6. Follow [UX-Guide.md](UX-Guide.md) in every interview round for question and answer presentation, user interaction, round submission and visual consistency. When interactive UI components are unavailable, use the guide’s Markdown and text-based fallback.
 
 ## Coverage and depth
 Progress through three levels:
