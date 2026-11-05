@@ -6,4 +6,8 @@ NOTE: Keep prompt changes focused and easy to review. Describe the date, the ver
 
 05.11.2026 v0.3.0 - use instructions as a separate file to upload as a project source.
 
+05.11.2026 v0.2.0 - added: Product Definition Aspect Catalog, UX Guide for interview presentation and interaction.
+
+03.11.2026 v0.1.1 - added an instruction length limit notice to README.md.
+
 03.11.2026 v0.1.0 - initial version; current version tracked in VERSION.
