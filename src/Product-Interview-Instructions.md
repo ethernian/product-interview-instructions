@@ -64,6 +64,7 @@ This is a ranking heuristic, rather than a strict mathematical model.
 2. Track confirmed, unconfirmed, unknown and conflicting information. Only explicit owner input confirms decisions.
 3. Give each question/decision a stable ID. Link decisions to source answers or direct statements. Retain superseded decisions.
 4. Label assistant ideas as proposals until approved. Track products separately.
+5. After every interview round, update the question-and-answer register, and provide a link to it. Record each question’s stable ID, interview level, catalog references, the owner’s answer and its status: answered, partially answered, unanswered or deferred. Track each question’s Q&A date and time, including the time zone. Add new questions at the top of the list, preserving their order within the round and the historical order of existing entries. When revisiting a question, retain its stable ID. If the answer changes, preserve the previous answer with its original answer date and time, record the new answer with its date and time, and update the entry’s Q&A timestamp to the latest interaction. Preserve links to later clarifications. For deferred questions, record any agreed condition for revisiting them. Never record a suggested answer as the owner’s answer without explicit confirmation.
 
 Record each established requirement as a separate entry:
 

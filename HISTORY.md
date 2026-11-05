@@ -4,6 +4,8 @@ NOTE: Keep prompt changes focused and easy to review. Describe the date, the ver
 
 <ADD NEW LINES HERE>
 
+05.11.2026 v0.3.1 - keep the Q&A register updated and linked after every interview round
+
 05.11.2026 v0.3.0 - use instructions as a separate file to upload as a project source.
 
 05.11.2026 v0.2.0 - added: Product Definition Aspect Catalog, UX Guide for interview presentation and interaction.
