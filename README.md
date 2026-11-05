@@ -9,15 +9,27 @@ On request, the assistant compiles a structured product definition from confirme
 ---
 ## Delivery artifacts
 
-[`Product-Interview-Instructions.md`](Product-Interview-Instructions.md) - The reusable interview instructions to be copied into the ChatGPT Project Settings.
+[`src/`](src/) contains the interview instructions, aspect catalog and UX guide. Add all files from this folder to your ChatGPT project sources, then use the setup text below as the Project instructions.
 
 ## Getting started guide
 
-1. Open [`Product-Interview-Instructions.md`](Product-Interview-Instructions.md) and copy its entire contents.
-2. In ChatGPT, create a new project or open the project you want to use for product definition.
+1. In ChatGPT, create a new project or open the project you want to use for product definition.
+2. Add **all files from [`src/`](src/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Definition-Aspects-EN.md` and `UX-Guide.md`.
 3. Open the project's menu and find its settings or instructions editor (the label may vary by interface).
-4. Paste the copied text into the **Project instructions** field and save your changes.
+4. Paste the text below into **Project instructions** and save your changes.
 5. Start a new chat inside that project and describe your product idea to begin the Q&A interview.
+
+### ChatGPT Project instructions
+
+```text
+Before starting a product-definition interview, read and follow Product-Interview-Instructions.md from the project files.
+
+Read and apply the supporting documents it references, including Product-Definition-Aspects-EN.md and UX-Guide.md. Use these instructions consistently throughout the interview.
+
+If a required file is missing or unreadable, tell the user which file is unavailable and ask for it. Do not invent its contents or claim to have followed it.
+
+Treat the user's explicit decisions as authoritative. Never treat suggested answers, inferences or assumptions as confirmed decisions without the user's confirmation.
+```
 
 Project instructions apply across chats within that project. See the [official ChatGPT Projects guide](https://learn.chatgpt.com/docs/projects) for more information.
 
@@ -25,7 +37,9 @@ Project instructions apply across chats within that project. See the [official C
 
 | File | Purpose |
 | --- | --- |
-| [`Product-Interview-Instructions.md`](Product-Interview-Instructions.md) | **Deliverable.** The reusable interview instructions to be copied into the ChatGPT Project Settings.  |
+| [`src/Product-Interview-Instructions.md`](src/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
+| [`src/Product-Definition-Aspects-EN.md`](src/Product-Definition-Aspects-EN.md) | Product definition aspect catalog to upload as a project source. |
+| [`src/UX-Guide.md`](src/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
 | [`README.md`](README.md) | Project overview and getting started guide. |
 | [`TODO.md`](TODO.md) | Planned improvements and outstanding tasks. |
 | [`HISTORY.md`](HISTORY.md) | Record of project changes and milestones. |
@@ -35,5 +49,4 @@ Project instructions apply across chats within that project. See the [official C
 
 Keep prompt changes focused and easy to review. Describe what changed, why it helps, and include an example conversation when useful.
 
-Keep `Product-Interview-Instructions.md` under 5,000 characters, including spaces and line breaks. 
-As for now, ChatGPT Project Instructions have an observed, but undocumented limit of approximately 8,000 characters.
+Keep the setup text in this README concise. Maintain the detailed interview rules and supporting guides in `src/`, and update the project sources when those files change.
