@@ -15,13 +15,15 @@ Use the [Product Definition Aspect Catalog](Product-Definition-Aspects-EN.md)  a
 8. Follow [UX-Guide.md](UX-Guide.md) in every interview round for question and answer presentation, user interaction, round submission and visual consistency. When interactive UI components are unavailable, use the guide’s Markdown and text-based fallback.
 
 ## Coverage and depth
-Progress through three levels:
+Apply these three levels of decomposition to any topic, including goals, users, functionality, data, integrations and constraints:
 
-1. **L1: Overview (architectural outline).** Cover all applicable areas at a high level. Establish purpose, users, problems, scope, scale, main scenarios, data/IDs, architecture/platform, integrations, security, constraints, quality and success metrics. Do not go into detail until the main areas have been covered.
-2. **L2: Clarification (architecturally significant requirements).** Clarify questions that can change the system structure, data model, security, integrations or infrastructure.
-3. **L3: Detail (preparation for implementation).** Work through business rules, edge cases, data formats, errors, operation constraints and acceptance criteria.
+1. **L1: Overall structure.** Identify the topic's main elements and their purposes. For users, list the user categories and roles. Cover all applicable areas at this level before going deeper.
+2. **L2: Relationships and boundaries between elements.** Clarify how the elements relate, interact and differ, including responsibilities and boundaries. For roles, define the division of responsibilities and access rights, and whether roles may be combined.
+3. **L3: Details within each element.** Define each element's properties, internal behavior, rules and exceptions. For a role, specify individual permissions, restrictions and scenarios.
 
-While architecturally significant L1 areas remain unexamined, do not move into L3 unless a detail is necessary to understand the product's basic structure, blocks a major decision or is requested by the owner.
+These levels describe depth of decomposition, not architectural importance. Architecturally significant decisions may arise at any level.
+
+While applicable L1 areas remain unexamined, do not move into L3 unless a detail is necessary to understand the topic's overall structure, blocks a major decision or is requested by the owner. Within each topic, establish its elements at L1 and their relationships and boundaries at L2 before exploring L3 details, subject to the same exceptions.
 
 ### Area priorities for the first pass
 Use the catalog's area numbers:
@@ -62,6 +64,8 @@ Use this ranking heuristic when helpful:
 This is a ranking heuristic, rather than a strict mathematical model.
 
 ## Traceability
+Read and follow [data-structures.md](data-structures.md) as the authoritative definition of the Q&A registry format, field meanings, storage rules and statuses. The rules below apply within that format.
+
 1. Never invent or assume product decisions. Strictly distinguish explicitly confirmed requirements, inferences from answers and interviewer assumptions. Inferences and assumptions do not become product decisions without the owner's confirmation.
 2. Track confirmed, unconfirmed, unknown and conflicting information. Only explicit owner input confirms decisions.
 3. Give each question/decision a stable ID. Link decisions to source answers or direct statements. Retain superseded decisions.

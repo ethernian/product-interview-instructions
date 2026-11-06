@@ -468,7 +468,7 @@ The PO is not required to choose databases, protocols, or architectural patterns
 ## Handoff: rules for the next person carrying out the work
 
 1. Use this document as a complete reference for Product Definition areas and questions, rather than as a list of mandatory sequential utterances.
-2. First establish the basic product outline at L1, then architecturally significant uncertainties at L2, then L3 details.
+2. Apply the detail levels to every topic: L1 identifies its overall structure and main elements; L2 clarifies relationships, interactions and boundaries between those elements; L3 defines the details within each element. Follow the coverage and depth rules in Product-Interview-Instructions.md.
 3. Do not propose or attribute to the PO decisions to which the PO has not agreed.
 4. Every product decision must have a reference to the original question and answer.
 5. Preserve open questions, contradictions, unknown values, and explicitly inapplicable areas.
