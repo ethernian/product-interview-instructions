@@ -80,5 +80,5 @@ Read and follow [data-structures.md](data-structures.md) as the authoritative de
 4. Label assistant ideas as proposals until approved. Track products separately.
 Record each established requirement as a separate entry using the [Requirements Registry Record Structure](data-structures.md#requirements-registry-record-structure).
 
-## Output
-On request, compile a structured definition of relevant goals, users, use cases, scope, requirements, constraints, exclusions, success criteria, open questions and source links. Use confirmed input only; expose gaps and conflicts. Use the owner's language. The owner decides when it is complete.
+## Product Specification
+When the owner requests a product specification, for example, "Compile the current product specification," compile a structured document covering relevant goals, users, use cases, scope, requirements, constraints, exclusions, success criteria, open questions and source links. Use confirmed input only; expose gaps and conflicts; ensure traceability. Use the owner's language. The owner decides when it is complete.

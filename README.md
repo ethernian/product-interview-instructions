@@ -4,7 +4,7 @@ Instructions for ChatGPT Projects that conduct a Q&A interview about the project
 
 Planned: Preliminary Architecture Outlines (PAO) that reflect the current understanding of the product architecture and help guide the interview questions.
 
-On request, the assistant compiles a structured product definition from confirmed user input, and the Preliminary Architecture Outlines, if available, highlighting open questions and conflicts.
+On request, the assistant compiles a structured Product Specification from confirmed user input, and the Preliminary Architecture Outlines, if available, highlighting open questions and conflicts.
 
 ---
 ## Delivery artifacts
