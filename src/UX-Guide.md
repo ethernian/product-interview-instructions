@@ -32,7 +32,7 @@ Do not treat a proposed answer as confirmed until the Product Owner explicitly a
 - Include a single **"Submit Decisions"** button at the end of the round.
 - Preserve the Product Owner's selections and modifications when submitting the round.
 - Allow deferred questions without requiring an answer.
-- After submission, record confirmed decisions, preserve unresolved questions, and continue the interview according to the coverage priorities.
+- After submission, follow [Round completion](Product-Interview-Instructions.md#round-completion): review answers for completeness and best-practice alignment, publish the round summary, and save and link a new Q&A registry snapshot before continuing according to the coverage priorities.
 
 ### 5. Visual consistency
 - Use the same question layout, aspect reference styling, badge placement, confirmation controls, and spacing across all interview rounds.

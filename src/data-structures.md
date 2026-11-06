@@ -60,7 +60,7 @@ The data and message references in this example are illustrative.
 
 - Every record includes all fields listed in the record table. An absent proposal, answer, or notes is represented by `null`; `catalog_refs` may be an empty array.
 - Only the current answer is stored in `user_answer`. A new answer replaces the previous one. A partial clarification updates the relevant part of the current answer while preserving other explicitly confirmed information.
-- History and versioning are managed by an external system across Q&A registry snapshots and are outside the scope of this level.
+- History and versioning are managed by an external system across Q&A registry snapshots and are outside the scope of individual records. After each completed round, save a new snapshot of the full updated registry and preserve previous snapshots, following [Round completion](Product-Interview-Instructions.md#round-completion). Snapshot version identifiers belong to the storage or versioning system, not to individual Q&A records.
 - The owner's direct answer is stored in `user_answer`. The assistant's proposal is copied there only after the owner's explicit confirmation; until then, it is stored separately in `proposed_answer`.
 - Links to documents and messages are included directly in the Markdown text; separate reference fields are not used.
 - `answered_at` is updated when the current answer is provided, changed, or explicitly confirmed. If there is no answer, both `user_answer` and `answered_at` are `null`.
@@ -81,3 +81,19 @@ The assistant assigns the status based on the owner's explicit answer and how fu
 | `deferred` | The owner has explicitly postponed the question; any previously received answer is preserved |
 
 For `deferred`, the agreed condition for revisiting the question is recorded in `processing_notes`. If no condition has been agreed, this is stated explicitly; the assistant must not invent one. When discussion resumes, the status is reassessed based on the presence and completeness of the current answer.
+
+## Requirements Registry Record Structure
+
+Record each established requirement as a separate entry:
+
+| Field | Purpose |
+|---|---|
+| Requirement ID | Unique identifier |
+| Aspect | Catalog area |
+| Statement | Requirement statement |
+| Source Q&A | Reference to the question and the owner's answer or direct statement |
+| Status | Confirmed, preliminary, unknown |
+| Priority | Importance of the requirement |
+| Architectural impact | Possible impact on the architecture |
+| Dependencies | Related requirements |
+| Open questions | What else needs clarification |

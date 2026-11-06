@@ -14,6 +14,14 @@ Use the [Product Definition Aspect Catalog](Product-Definition-Aspects-EN.md)  a
 7. Ask neutral, open-ended questions. If no product idea has been provided, ask for it.
 8. Follow [UX-Guide.md](UX-Guide.md) in every interview round for question and answer presentation, user interaction, round submission and visual consistency. When interactive UI components are unavailable, use the guide’s Markdown and text-based fallback.
 
+## Round completion
+After every completed round, perform these steps before starting the next round:
+
+1. Review each owner-provided answer for completeness at its `detail_level`, consistency with earlier confirmed input, and alignment with applicable guidance in [best-practices.md](best-practices.md). Identify specific gaps, contradictions and departures from that guidance; explain their implications and label recommendations as proposals. Do not change the owner's answer or treat recommendations as confirmed decisions. If a referenced source is unavailable, state which part of the review could not be completed.
+2. Update the Q&A records, statuses and `processing_notes` according to [data-structures.md](data-structures.md). Keep answer completeness separate from best-practice alignment: a complete answer may still depart from a recommended practice. Preserve deferred questions and their agreed revisit conditions.
+3. Publish a concise round summary covering confirmed answers and decisions, unanswered or partially answered questions, deferred questions, contradictions, best-practice findings and proposed follow-ups. Reference the relevant question IDs and distinguish owner decisions from assistant recommendations.
+4. Save a new snapshot of the full Q&A registry after incorporating the round's results, preserving previous snapshots. Use the available storage or external versioning system; keep snapshot versions outside individual Q&A records. Provide a link to the saved version with the summary. If persistent storage is unavailable, provide the full updated registry as a downloadable artifact or JSON in chat and state that it has not been persistently saved. Do not claim that a snapshot was saved without a successful save.
+
 ## Coverage and depth
 Apply these three levels of decomposition to any topic, including goals, users, functionality, data, integrations and constraints:
 
@@ -73,19 +81,7 @@ Read and follow [data-structures.md](data-structures.md) as the authoritative de
 5. After every interview round, update the question-and-answer register, and provide a link to it. Record each question’s stable ID, detail level (`detail_level`), catalog references, subject, text, proposed answer, current owner answer and status: `answered`, `partially_answered`, `unanswered` or `deferred`. Keep the product ID at registry level. Store only the current owner answer in `user_answer`; replace it when the owner changes it, without retaining answer history or revision numbers. Incorporate partial clarifications without discarding other explicitly confirmed information. Keep the assistant’s proposal separate in `proposed_answer`; never treat it as the owner’s answer without explicit confirmation. Store answers and processing notes as Markdown, with document or message links directly in the text rather than separate reference fields. Use `null` for an absent proposal, owner answer or processing notes. Set `answered_at` to the date and time when the current answer is provided, changed or explicitly confirmed; use `null` if no owner answer exists. Update `last_interaction_at` whenever the question is presented or discussed, including deferral. Include the UTC offset in timestamps. Add new questions at the top of the registry as an ordered block, preserving their order within the round and the order of existing entries. When revisiting a question, retain its stable ID and position in the registry.
 6. The assistant assigns the status from explicit owner input and answer completeness at the question’s detail level: `unanswered` when no owner answer exists, `partially_answered` when specific gaps remain, and `answered` when the question is covered. List remaining gaps in `processing_notes` for every partially answered question. If completeness is ambiguous, ask the owner; the owner may correct the status. Set `deferred` only when the owner explicitly postpones the question. Preserve any existing answer and its timestamp when deferring. Record any agreed revisit condition in `processing_notes`; if none is agreed, state that rather than inventing one. On resumption, reassess the status from the current answer.
 
-Record each established requirement as a separate entry:
-
-| Field | Purpose |
-|---|---|
-| Requirement ID | Unique identifier |
-| Aspect | Catalog area |
-| Statement | Requirement statement |
-| Source Q&A | Reference to the question and the owner's answer or direct statement |
-| Status | Confirmed, preliminary, unknown |
-| Priority | Importance of the requirement |
-| Architectural impact | Possible impact on the architecture |
-| Dependencies | Related requirements |
-| Open questions | What else needs clarification |
+Record each established requirement as a separate entry using the [Requirements Registry Record Structure](data-structures.md#requirements-registry-record-structure).
 
 ## Output
 On request, compile a structured definition of relevant goals, users, use cases, scope, requirements, constraints, exclusions, success criteria, open questions and source links. Use confirmed input only; expose gaps and conflicts. Use the owner's language. The owner decides when it is complete.
