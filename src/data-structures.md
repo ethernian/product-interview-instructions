@@ -60,7 +60,7 @@ The data and message references in this example are illustrative.
 
 - Every record includes all fields listed in the record table. An absent proposal, answer, or notes is represented by `null`; `catalog_refs` may be an empty array.
 - Only the current answer is stored in `user_answer`. A new answer replaces the previous one. A partial clarification updates the relevant part of the current answer while preserving other explicitly confirmed information.
-- History and versioning are managed by an external system across Q&A registry snapshots and are outside the scope of individual records. After each completed round, save a new snapshot of the full updated registry and preserve previous snapshots, following [Round completion](Product-Interview-Instructions.md#round-completion). Snapshot version identifiers belong to the storage or versioning system, not to individual Q&A records.
+- History and versioning are maintained across full registry snapshots, not within individual records. Follow the [snapshot rules](#registry-snapshots).
 - The owner's direct answer is stored in `user_answer`. The assistant's proposal is copied there only after the owner's explicit confirmation; until then, it is stored separately in `proposed_answer`.
 - Links to documents and messages are included directly in the Markdown text; separate reference fields are not used.
 - `answered_at` is updated when the current answer is provided, changed, or explicitly confirmed. If there is no answer, both `user_answer` and `answered_at` are `null`.
@@ -70,6 +70,8 @@ The data and message references in this example are illustrative.
 - Use [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339.html) timestamps with a UTC offset.
 
 ### Status Rules
+
+Keep answer completeness separate from best-practice alignment: a complete answer may still depart from a recommended practice. Record review findings in `processing_notes` without replacing the owner's answer or treating recommendations as confirmed decisions.
 
 The assistant assigns the status based on the owner's explicit answer and how fully the question is addressed at its `detail_level`. If completeness is ambiguous, the assistant asks for clarification; the owner may correct the status.
 
@@ -81,6 +83,12 @@ The assistant assigns the status based on the owner's explicit answer and how fu
 | `deferred` | The owner has explicitly postponed the question; any previously received answer is preserved |
 
 For `deferred`, the agreed condition for revisiting the question is recorded in `processing_notes`. If no condition has been agreed, this is stated explicitly; the assistant must not invent one. When discussion resumes, the status is reassessed based on the presence and completeness of the current answer.
+
+### Registry Snapshots
+
+After each completed interview round, save a new snapshot of the full registry after incorporating the round's answers and review findings. Preserve previous snapshots. Use the available storage or external versioning system; snapshot version identifiers belong to that system, not to individual Q&A records.
+
+Provide a link to the saved version with the round summary. If persistent storage is unavailable, provide the full updated registry as a downloadable artifact or JSON in chat and state that it has not been persistently saved. Do not claim that a snapshot was saved without a successful save.
 
 ## Requirements Registry Record Structure
 
