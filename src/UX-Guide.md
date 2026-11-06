@@ -21,7 +21,7 @@ Apply the following formatting and interaction rules consistently to every produ
 ### 3. Answer confirmation
 For each question, provide three mutually exclusive options:
 - **Confirm**: Accept the proposed answer.
-- **Modify**: Reveal a text field where the Product Owner can provide corrections or an alternative answer.
+- **Modify**: Modify: When supported, open an in-place Markdown editor prefilled with the proposed answer so the Product Owner can correct or replace it. Otherwise, use an available text editor prefilled with the proposed answer. If no editable surface is available, ask the Product Owner to submit corrections or a replacement answer in chat.
 - **Defer**: Postpone the question without treating its proposed answer as confirmed.
 
 Do not treat a proposed answer as confirmed until the Product Owner explicitly accepts it.
