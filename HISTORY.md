@@ -4,6 +4,8 @@ NOTE: Keep prompt changes focused and easy to review. Describe the date, the ver
 
 <ADD NEW LINES HERE>
 
+07.11.2026 v0.3.4 - clarified L1–L3 detail levels, centralized Q&A and requirements structures, added round reviews, summaries and registry snapshots, and named the Product Specification deliverable.
+
 06.11.2026 v0.3.3 - added best practices, prefill for modify answer editor  
   
 05.11.2026 v0.3.2 - added an interview welcome message with optional project document uploads and a non-interview mode that preserves interview progress for later resumption.
