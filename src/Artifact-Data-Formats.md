@@ -1,6 +1,6 @@
-# Data Structures and Formats
+# Artifact Data Formats
 
-This document defines interview data structures, formats, and storage rules for further processing during development and use by external systems.
+This document defines artifact data structures, formats, and storage rules for the Product Development Process and use by external systems. The [Product Development Handbook](Product-Development-Handbook.md) defines the methodology and how these artifacts are used.
 
 ## Q&A Registry Record Structure
 
@@ -105,3 +105,64 @@ Record each established requirement as a separate entry:
 | Architectural impact | Possible impact on the architecture |
 | Dependencies | Related requirements |
 | Open questions | What else needs clarification |
+
+## Decision Registry Record Structure
+
+The Decision Registry is a versioned collection of Decision Records shared by all stages. Each record captures a significant decision or proposal.
+
+| Field | Purpose |
+|---|---|
+| Decision ID | Stable identifier for the record |
+| Decision or proposal | The choice made or proposed |
+| Scope | The stage or areas to which the decision applies |
+| Context | The circumstances and problem addressed |
+| Rationale | Why the choice was made or proposed |
+| Status | Proposed, Confirmed, Rejected, or Superseded |
+| Responsible actor | The Human Stakeholder or Process Agent responsible for the decision or proposal |
+| Confirmation source | Evidence of confirmation by an actor with the necessary authority, identifying the confirming actor and, when acting on another actor's behalf, that actor and the source and scope of the explicit delegation |
+| Affected artifacts | Links to requirements, designs, tasks, implementation, and other affected artifacts |
+| Alternatives considered | Other choices evaluated, where relevant |
+| Consequences | Expected effects and trade-offs, where relevant |
+| Replacement record | Link to the replacement Decision Record when this record is Superseded |
+
+### Decision Statuses
+
+| Status | Meaning |
+|---|---|
+| Proposed | A choice has been recorded but not confirmed |
+| Confirmed | A choice has been confirmed by an actor with the necessary authority, including explicit delegation when acting on another actor's behalf |
+| Rejected | A proposal has been rejected by an actor with the necessary authority, including explicit delegation when acting on another actor's behalf |
+| Superseded | A previous decision has been replaced; its record is preserved and links to its replacement |
+
+Follow the [Decision Management rule](Product-Development-Handbook.md#5-rules-applied-across-stages) for capturing, confirming, applying, and revising decisions. Routine execution choices within confirmed requirements and constraints do not require individual records.
+
+## Stage Completion Criterion Structure
+
+Each Stage Completion Criterion defines a condition that stage outputs must meet before downstream use and identifies who confirms it and how.
+
+| Field | Purpose |
+|---|---|
+| Condition | The condition that stage outputs must meet |
+| Confirmation method | Manual confirmation or automatic check; the method does not itself grant confirmation authority |
+| Responsible actor | The Human Stakeholder or Process Agent assigned to confirm the condition and possessing the necessary authority |
+| Confirmation source | Evidence identifying the confirming actor and, when acting on another actor's behalf, that actor and the source and scope of the explicit delegation |
+
+## Source Registry Record Structure
+
+Each record identifies a source material and the information needed to assess and trace its use.
+
+| Field | Purpose |
+|---|---|
+| Source | Reference to the source material |
+| Provenance | Where the material came from |
+| Version | The version of the material used |
+| Reliability status | The assessed reliability of the material |
+
+## Coverage Map Entry Structure
+
+Each entry records the investigation status of one area.
+
+| Field | Purpose |
+|---|---|
+| Area | The area being investigated |
+| Status | Defined, partially defined, unexplored, or not applicable |
