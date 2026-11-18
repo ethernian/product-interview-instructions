@@ -1,0 +1,6 @@
+{
+    "diffEditor.hideOriginalLineNumbers": false,
+    "[markdown]": {
+       "editor.lineNumbers": "on"
+    }
+}

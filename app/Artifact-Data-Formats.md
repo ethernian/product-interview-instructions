@@ -1,6 +1,6 @@
 # Artifact Data Formats
 
-This document defines artifact data structures, formats, and storage rules for the Product Development Process and use by external systems. The [Product Development Handbook](../stages/Product-Development-Handbook.md) defines the methodology and how these artifacts are used.
+This document defines artifact data structures, formats, and storage rules for the Interview Process and use by external systems. The [Product Interview Instructions](Product-Interview-Instructions.md) defines the methodology and how these artifacts are used.
 
 ## Q&A Registry Record Structure
 
