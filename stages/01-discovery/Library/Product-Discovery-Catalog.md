@@ -20,6 +20,14 @@ A universal catalog of areas and questions for interviews with a Product Owner (
 
 The PO is not required to choose databases, protocols, or architectural patterns. Their task is to define needs, constraints, and expected behavior. Technical decisions must be based on confirmed answers.
 
+## Catalog entry priorities for the first pass
+
+1. **P0 (must be examined):** 1 Product, 2 Users, 3 Scale, 4 Functionality, 5 Data, 6 Load, 7 Clients, 8 Access, 10 Integrations, 12 Security, 14 Reliability, 24 Constraints.
+2. **P1 (check applicability):** 9 Multi-tenancy, 11 Processes, 13 Compliance, 15 Consistency, 16 Infrastructure, 17 Operations, 18 Development, 20 Analytics, 21 Notifications.
+3. **P2 (depends on product type):** 19 Billing, 22 AI/ML, 23 Migration.
+
+P0 does not mean that every specific question needs a precise answer. For example, the exact RPS may be unknown, but the approximate load scale should still be established.
+
 ---
 
 ## 1. Product and business context

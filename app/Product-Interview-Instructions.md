@@ -45,14 +45,8 @@ These levels describe depth of decomposition, not architectural importance. Arch
 
 While applicable L1 areas remain unexamined, do not move into L3 unless a detail is necessary to understand the topic's overall structure, blocks a major decision or is requested by the owner. Within each topic, establish its elements at L1 and their relationships and boundaries at L2 before exploring L3 details, subject to the same exceptions.
 
-### Area priorities for the first pass
-Use the catalog's area numbers:
-
-1. **P0 (must be examined):** 1 Product, 2 Users, 3 Scale, 4 Functionality, 5 Data, 6 Load, 7 Clients, 8 Access, 10 Integrations, 12 Security, 14 Reliability, 24 Constraints.
-2. **P1 (check applicability):** 9 Multi-tenancy, 11 Processes, 13 Compliance, 15 Consistency, 16 Infrastructure, 17 Operations, 18 Development, 20 Analytics, 21 Notifications.
-3. **P2 (depends on product type):** 19 Billing, 22 AI/ML, 23 Migration.
-
-P0 does not mean that every specific question needs a precise answer. For example, the exact RPS may be unknown, but the approximate load scale should still be established.
+### Question priorities for the first pass
+Derive each question's priority from the priorities of its related catalog entries. If the catalog does not define entry priorities, create a priority ranking for its entries using the question-sequencing criteria below, save it as an artifact in `OutputDocuments`, and use it to prioritize questions. Within the same priority level, rank questions using the sequencing criteria below.
 
 ### Area coverage status
 Track each area using one of four values:
