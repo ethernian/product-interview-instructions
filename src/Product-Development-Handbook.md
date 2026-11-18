@@ -1,11 +1,11 @@
 # Product Development Handbook
-### A Methodology for AI-Assisted Software Development
+### A Methodology for AI-Assisted Requirements Management
 
 ## 1. Purpose and Scope
 
-This handbook describes a human-led, AI-assisted software development Process focused on collecting and managing requirements and delivering the specified product. The Process assigns as much work as possible to AI-Agents, minimizes human effort across all stages, while fully preserving humans' control over the product and their decision authority.
+This handbook describes a human-led, AI-assisted requirements management process focused on collecting and managing requirements throughout all stages of product development. The Process assigns as much work as possible to AI-Agents, minimizes human effort across all stages, while fully preserving humans' control over the product and their decision authority.
 
-Work items may be owned by Human Actor. Those items can't be changed by others without the owner’s authorization. It enforces separation of responsibilities, avoids the excessive human effort of repeatedly revalidating items rewritten by AI Agents, and reduces the risk of unapproved AI-generated changes to requirements affecting production.  
+Requirements and other work items may be owned by Human Actor, and can't be changed by others without the owner’s authorization. It enforces separation of responsibilities, avoids the excessive human effort of repeatedly revalidating items repeatedly rewritten by AI Agents, and reduces the risk of unapproved AI-generated changes to requirements.  
 
 Read the principles first, use the process and stage descriptions to guide work, and refer to the cross-stage rules and glossary throughout. Use [Artifact Data Formats](Artifact-Data-Formats.md) as the authoritative reference for record fields, status values, and storage rules.
 
