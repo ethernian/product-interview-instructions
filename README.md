@@ -9,12 +9,12 @@ On request, the assistant compiles a structured Product Specification from confi
 ---
 ## Delivery artifacts
 
-[`src/`](src/) contains the interview instructions, aspect catalog and UX guide. Add all files from this folder to your ChatGPT project sources, then use the setup text below as the Project instructions.
+[`app/`](app/) contains the interview instructions, artifact formats and UX guide; [`stages/`](stages/) contains the stage instructions and discovery catalog. Add the files from both folders to your ChatGPT project sources, then use the setup text below as the Project instructions.
 
 ## Getting started guide
 
 1. In ChatGPT, create a new project or open the project you want to use for product definition.
-2. Add **all files from [`src/`](src/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
+2. Add **all files from [`app/`](app/) and [`stages/`](stages/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Artifact-Data-Formats.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
 3. Open the project's menu and find its settings or instructions editor (the label may vary by interface).
 4. Paste the text below into **Project instructions** and save your changes.
 5. Start a new chat inside that project and describe your product idea to begin the Q&A interview.
@@ -35,11 +35,14 @@ Project instructions apply across chats within that project. See the [official C
 
 ## Repository guide
 
+To start or resume a stage with a repository-aware agent, ask it to `run <stage>`, replacing `<stage>` with a directory name under `stages/` numbered `01` through `09`. The agent follows `stages/<stage>/README.md` and any stage-specific `AGENTS.md`.
+
 | File | Purpose |
 | --- | --- |
-| [`src/Product-Interview-Instructions.md`](src/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
-| [`src/Product-Discovery-Catalog.md`](src/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
-| [`src/UX-Guide.md`](src/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
+| [`app/Product-Interview-Instructions.md`](app/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
+| [`app/Artifact-Data-Formats.md`](app/Artifact-Data-Formats.md) | Artifact structures and storage rules. |
+| [`stages/01-discovery/Library/Product-Discovery-Catalog.md`](stages/01-discovery/Library/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
+| [`app/UX-Guide.md`](app/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
 | [`README.md`](README.md) | Project overview and getting started guide. |
 | [`TODO.md`](TODO.md) | Planned improvements and outstanding tasks. |
 | [`HISTORY.md`](HISTORY.md) | Record of project changes and milestones. |
@@ -49,4 +52,4 @@ Project instructions apply across chats within that project. See the [official C
 
 Keep prompt changes focused and easy to review. Describe what changed, why it helps, and include an example conversation when useful.
 
-Keep the setup text in this README concise. Maintain the detailed interview rules and supporting guides in `src/`, and update the project sources when those files change.
+Keep the setup text in this README concise. Maintain the detailed interview rules and supporting guides in `app/` and stage instructions in `stages/`, and update the project sources when those files change.

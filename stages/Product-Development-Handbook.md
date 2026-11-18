@@ -7,7 +7,7 @@ This handbook describes a human-led, AI-assisted requirements management process
 
 Requirements and other work items may be owned by Human Actor, and can't be changed by others without the owner’s authorization. It enforces separation of responsibilities, avoids the excessive human effort of repeatedly revalidating items repeatedly rewritten by AI Agents, and reduces the risk of unapproved AI-generated changes to requirements.  
 
-Read the principles first, use the process and stage descriptions to guide work, and refer to the cross-stage rules and glossary throughout. Use [Artifact Data Formats](Artifact-Data-Formats.md) as the authoritative reference for record fields, status values, and storage rules.
+Read the principles first, use the process and stage descriptions to guide work, and refer to the cross-stage rules and glossary throughout. Use [Artifact Data Formats](../app/Artifact-Data-Formats.md) as the authoritative reference for record fields, status values, and storage rules.
 
 ## 2. Core Principles
 
@@ -86,24 +86,24 @@ Stages define the initial sequence but allow revisiting earlier stages and regen
 
 1. **Instructions and Resources.** A versioned collection of methods, templates, and alternatives, including applicability conditions, limitations, and selection criteria.
 2. **Stage Instructions.** Rules governing input-to-output transformation, Instructions and Resources usage, and uncertainty handling.
-3. **Stage Completion Criteria.** Conditions that stage outputs must meet before downstream use. See the [criterion structure and confirmation methods](Artifact-Data-Formats.md#stage-completion-criterion-structure).
+3. **Stage Completion Criteria.** Conditions that stage outputs must meet before downstream use. See the [criterion structure and confirmation methods](../app/Artifact-Data-Formats.md#stage-completion-criterion-structure).
 4. **Decision Registry.** A versioned collection of significant decisions made throughout the Process, covering scope, requirements, priorities, architecture, implementation, deployment, and operations. All stages contribute to the same registry.
-5. **Decision Record.** An entry capturing a significant decision or proposal in the Decision Registry. See the [record fields and statuses](Artifact-Data-Formats.md#decision-registry-record-structure).
+5. **Decision Record.** An entry capturing a significant decision or proposal in the Decision Registry. See the [record fields and statuses](../app/Artifact-Data-Formats.md#decision-registry-record-structure).
 
 ### 6.2. Discovery
 
 See the [discovery stage](01-discovery/README.md).
 
 1. **Discovery Catalog.** A versioned catalog of thematically organized questions used for adaptive information gathering to support requirements definition and subsequent design decisions.
-2. **Q&A Registry.** Questions and their current answers, proposals, and unresolved issues. See the [record structure and storage rules](Artifact-Data-Formats.md#qa-registry-record-structure).
-3. **Source Registry.** A record of source materials used by the Process. See the [source record structure](Artifact-Data-Formats.md#source-registry-record-structure).
-4. **Coverage Map.** The investigation status of each area. See the [entry structure and status values](Artifact-Data-Formats.md#coverage-map-entry-structure).
+2. **Q&A Registry.** Questions and their current answers, proposals, and unresolved issues. See the [record structure and storage rules](../app/Artifact-Data-Formats.md#qa-registry-record-structure).
+3. **Source Registry.** A record of source materials used by the Process. See the [source record structure](../app/Artifact-Data-Formats.md#source-registry-record-structure).
+4. **Coverage Map.** The investigation status of each area. See the [entry structure and status values](../app/Artifact-Data-Formats.md#coverage-map-entry-structure).
 
 ### 6.3. Requirements
 
 See the [requirements stage](02-requirements/README.md).
 
-1. **Requirements Registry.** A structured collection of atomic requirements. See the [record structure](Artifact-Data-Formats.md#requirements-registry-record-structure).
+1. **Requirements Registry.** A structured collection of atomic requirements. See the [record structure](../app/Artifact-Data-Formats.md#requirements-registry-record-structure).
 2. **Requirements Specification.** A consolidated description of expected system behavior and constraints, generated from the Requirements Registry.
 3. **Acceptance Criteria.** Verifiable conditions determining whether a requirement or user scenario has been fulfilled.
 

@@ -2,16 +2,18 @@
 ARGUMENTS:
  - Input Documents.
  - Solution Library
- - ProcessDescripton 
- - OutputDocument
+ - ProcessDescription
+ - OutputDocuments: a directory for the interview artifacts
 
 ## Goal
 Your goal is to identify and resolve issues like semantic gaps, contradictions, uncertainties and other obstacles in the documents given by ARGUMENTS that would prevent the Process given by ProcessDescription from executed properly, reliably and as expected.  
   
-You resolve these issues by fullfilling an Q&A interview with the Stakeholder as described below and recording these answers in the OutputDocument.
+You resolve these issues by conducting a Q&A interview with the Stakeholder as described below and recording the answers in OutputDocuments.
 
 ## Preparing Interview
-Before the interview starts, create the OutputDocument containing a comprehensive list of proposed decisions as described by @Artifact-Data-Formats.md. 
+Before the interview starts, read the input documents and Solution Library. Create the OutputDocuments directory if needed, and resume existing artifacts rather than overwrite them. Use [Artifact-Data-Formats.md](Artifact-Data-Formats.md) for artifact structures and storage rules.
+
+Store the current Q&A registry in `qa-registry.json`, the Source Registry in `source-registry.md`, and the Coverage Map in `coverage-map.md` within OutputDocuments. Record open questions in the Q&A registry. Keep full Q&A registry snapshots in `snapshots/`, using a new sequential filename for each completed round. Initialize the registry with a product ID and an empty records array; add questions and source-supported proposed answers as they are prepared, without treating proposals as confirmed decisions. Record input sources in the Source Registry and initialize catalog areas as not examined in the Coverage Map. Update the source registry when sources change and reassess the coverage map after each round.
 
 ## Interview
 
@@ -27,7 +29,7 @@ Before the interview starts, create the OutputDocument containing a comprehensiv
 ## Round completion
 After every completed round, perform these steps before starting the next round:
 
-1. Review each owner-provided answer for completeness at the question's level of detail, consistency with earlier confirmed input, and alignment with applicable guidance in [Requirements-Management-Resources.md](Requirements-Management-Resources.md). Identify specific gaps, contradictions and departures from that guidance; explain their implications and label recommendations as proposals. Do not change the owner's answer or treat recommendations as confirmed decisions. If a referenced source is unavailable, state which part of the review could not be completed.
+1. Review each owner-provided answer for completeness at the question's level of detail, consistency with earlier confirmed input, and alignment with applicable guidance in [Requirements-Management-Resources.md](../stages/02-requirements/Library/Requirements-Management-Resources.md). Identify specific gaps, contradictions and departures from that guidance; explain their implications and label recommendations as proposals. Do not change the owner's answer or treat recommendations as confirmed decisions. If a referenced source is unavailable, state which part of the review could not be completed.
 2. Update the Q&A registry according to the [record structure and manipulation rules](Artifact-Data-Formats.md#qa-registry-record-structure), incorporating the review findings.
 3. Publish a concise round summary covering confirmed answers and decisions, unanswered or partially answered questions, deferred questions, contradictions, best-practice findings and proposed follow-ups. Reference the relevant question IDs and distinguish owner decisions from assistant recommendations.
 4. Save a new snapshot of the full Q&A registry according to the [snapshot rules](Artifact-Data-Formats.md#registry-snapshots), and provide its link or the specified fallback with the round summary.

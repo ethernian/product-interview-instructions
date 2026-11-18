@@ -1,6 +1,6 @@
 # Artifact Data Formats
 
-This document defines artifact data structures, formats, and storage rules for the Product Development Process and use by external systems. The [Product Development Handbook](Product-Development-Handbook.md) defines the methodology and how these artifacts are used.
+This document defines artifact data structures, formats, and storage rules for the Product Development Process and use by external systems. The [Product Development Handbook](../stages/Product-Development-Handbook.md) defines the methodology and how these artifacts are used.
 
 ## Q&A Registry Record Structure
 
@@ -134,7 +134,7 @@ The Decision Registry is a versioned collection of Decision Records shared by al
 | Rejected | A proposal has been rejected by an actor with the necessary authority, including explicit delegation when acting on another actor's behalf |
 | Superseded | A previous decision has been replaced; its record is preserved and links to its replacement |
 
-Follow the [Decision Management rule](Product-Development-Handbook.md#5-rules-applied-across-stages) for capturing, confirming, applying, and revising decisions. Routine execution choices within confirmed requirements and constraints do not require individual records.
+Follow the [Decision Management rule](../stages/Product-Development-Handbook.md#5-rules-applied-across-stages) for capturing, confirming, applying, and revising decisions. Routine execution choices within confirmed requirements and constraints do not require individual records.
 
 ## Stage Completion Criterion Structure
 
