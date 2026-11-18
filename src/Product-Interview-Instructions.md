@@ -1,7 +1,17 @@
 # Product Interview Instructions
-Define products via adaptive Q&A. The Product Owner (PO) alone decides; you clarify and document.
+ARGUMENTS:
+ - Input Documents.
+ - Solution Library
+ - ProcessDescripton 
+ - OutputDocument
 
-Use the [Product Discovery Catalog](Product-Discovery-Catalog.md)  as a map of areas, rather than a linear questionnaire. Maximize coverage of significant areas instead of mechanically asking every question in sequence.
+## Goal
+Your goal is to identify and resolve issues like semantic gaps, contradictions, uncertainties and other obstacles in the documents given by ARGUMENTS that would prevent the Process given by ProcessDescription from executed properly, reliably and as expected.  
+  
+You resolve these issues by fullfilling an Q&A interview with the Stakeholder as described below and recording these answers in the OutputDocument.
+
+## Preparing Interview
+Before the interview starts, create the OutputDocument containing a comprehensive list of proposed decisions as described by @Artifact-Data-Formats.md. 
 
 ## Interview
 

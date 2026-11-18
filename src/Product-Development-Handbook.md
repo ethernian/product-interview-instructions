@@ -40,17 +40,17 @@ Read the principles first, use the process and stage descriptions to guide work,
 
 ## 3. How the Process Works
 
-Each stage transforms inputs into outputs through activities that select and adapt standard solutions from the stage’s design patterns library. The outputs are verified against completion criteria and accepted by an actor with the necessary authority.
+Each stage transforms inputs into outputs through activities that select and adapt standard solutions from the stage’s instructions and resources. The outputs are verified against completion criteria and accepted by an actor with the necessary authority.
 
 1. **Development Stages.**  
 The Process contains of multiple stages from 01-discovery to 07-monitoring as described in [Development Stages](#4-development-stages). These stages are represented by folders in the directory structure.
 2. **Stage-Based Transformation.**  
-Each stage has defined Inputs, Outputs, Design Patterns (accesses as an external resource), and Stage Completion Criteria. Usually output of previous stage is used and the input as the next stage, but some stages may have more complex dependencies. Each stage contans README.md file describing the stage processes and its dependecies to other stages.
+Each stage has defined Inputs, Outputs, Stage Instructions, Resources, and Completion Criteria. Usually output of previous stage is used and the input as the next stage, but some stages may have more complex dependencies. Each stage contans README.md file describing the stage processes and resources and its dependecies to other stages.
 3. **Stage recursion.**  
 Every stage may be treated as a separate sub-project with own deliverables and define own Stages. For example, the 07-monitoring stage may be treated as a project with own 01-discovery, 02-requirements, 03-deployment and so on. In this case the stage inherits Inputs from the the stage of the same kind in the upper levels.
-4. **Design Patterns.**  
-Each stage uses its own library of work processes, solutions, methods, templates, alternatives, and applicability conditions. Selected patterns are adapted to the input data; inapplicable patterns are excluded. Design Patterns are usually an external resource, shared between many projects.  
-If no suitable Design Pattern is available, the Process may develop and use a new solution, then propose it as an addition to the Design Pattern Library through a pull request. 
+4. **Instructions and Resources.**
+Each stage uses its own library of work processes, solutions, methods, templates, alternatives, and applicability conditions. Selected resources are adapted to the input data; inapplicable resources are excluded. Instructions and Resources are usually an external resource, shared between many projects.
+If no suitable instruction or resource is available, the Process may develop and use a new solution, then propose it as an addition to the Instructions and Resources collection through a pull request.
 5. **Iterative Execution.**  
 Stages define the initial sequence but allow revisiting earlier stages and regenerating dependent artifacts.
 
@@ -74,7 +74,7 @@ Stages define the initial sequence but allow revisiting earlier stages and regen
 2. **Acceptance.** An actor with the necessary authority accepts stage outputs against defined criteria. Verification alone does not confer acceptance authority. Acceptance on another actor's behalf requires that actor's explicit delegation.
 3. **Change Management.** When any artifact changes, identify affected dependencies, regenerate necessary outputs, and repeat verification. Do not automatically modify confirmed decisions.
 4. **Traceability.** Maintain bidirectional links between sources, requirements, decisions, tasks, implementation, and tests. Record the patterns used and the rationale for their selection.
-5. **Version Management.** Version artifacts, instructions, and Design Patterns. Preserve the ability to determine which versions of inputs and rules produced each output.
+5. **Version Management.** Version artifacts and Instructions and Resources. Preserve the ability to determine which versions of inputs and rules produced each output.
 6. **Release.** Release only accepted outputs.
 7. **Feedback.** Route operational data, defects, and new needs to the appropriate stages through Change Management.
 8. Decision Management. Across all stages, Actors may identify gaps, contradictions, blockers, and uncertainties in upstream requirements and stage documents. Within their authority, they may independently make decisions to resolve these issues or substantially reduce uncertainty in requirements, provided those decisions introduce no new conflicts or other issues. Routine execution choices within confirmed requirements and constraints do not require individual records.
@@ -84,8 +84,8 @@ Stages define the initial sequence but allow revisiting earlier stages and regen
 
 ### 6.1. Methodology Artifacts
 
-1. **Design Patterns.** A versioned collection of methods, templates, and alternatives, including applicability conditions, limitations, and selection criteria.
-2. **Stage Instructions.** Rules governing input-to-output transformation, Design Patterns usage, and uncertainty handling.
+1. **Instructions and Resources.** A versioned collection of methods, templates, and alternatives, including applicability conditions, limitations, and selection criteria.
+2. **Stage Instructions.** Rules governing input-to-output transformation, Instructions and Resources usage, and uncertainty handling.
 3. **Stage Completion Criteria.** Conditions that stage outputs must meet before downstream use. See the [criterion structure and confirmation methods](Artifact-Data-Formats.md#stage-completion-criterion-structure).
 4. **Decision Registry.** A versioned collection of significant decisions made throughout the Process, covering scope, requirements, priorities, architecture, implementation, deployment, and operations. All stages contribute to the same registry.
 5. **Decision Record.** An entry capturing a significant decision or proposal in the Decision Registry. See the [record fields and statuses](Artifact-Data-Formats.md#decision-registry-record-structure).
