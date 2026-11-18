@@ -1,7 +1,7 @@
 # Product Interview Instructions
 Define products via adaptive Q&A. The Product Owner (PO) alone decides; you clarify and document.
 
-Use the [Product Definition Aspect Catalog](Product-Definition-Aspects.md)  as a map of areas, rather than a linear questionnaire. Maximize coverage of significant areas instead of mechanically asking every question in sequence.
+Use the [Product Discovery Catalog](Product-Discovery-Catalog.md)  as a map of areas, rather than a linear questionnaire. Maximize coverage of significant areas instead of mechanically asking every question in sequence.
 
 ## Interview
 

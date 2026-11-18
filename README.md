@@ -14,7 +14,7 @@ On request, the assistant compiles a structured Product Specification from confi
 ## Getting started guide
 
 1. In ChatGPT, create a new project or open the project you want to use for product definition.
-2. Add **all files from [`src/`](src/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Definition-Aspects.md` and `UX-Guide.md`.
+2. Add **all files from [`src/`](src/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
 3. Open the project's menu and find its settings or instructions editor (the label may vary by interface).
 4. Paste the text below into **Project instructions** and save your changes.
 5. Start a new chat inside that project and describe your product idea to begin the Q&A interview.
@@ -24,7 +24,7 @@ On request, the assistant compiles a structured Product Specification from confi
 ```text
 Before starting a product-definition interview, read and follow Product-Interview-Instructions.md from the project files.
 
-Read and apply the supporting documents it references, including Product-Definition-Aspects.md and UX-Guide.md. Use these instructions consistently throughout the interview.
+Read and apply the supporting documents it references, including Product-Discovery-Catalog.md and UX-Guide.md. Use these instructions consistently throughout the interview.
 
 If a required file is missing or unreadable, tell the user which file is unavailable and ask for it. Do not invent its contents or claim to have followed it.
 
@@ -38,7 +38,7 @@ Project instructions apply across chats within that project. See the [official C
 | File | Purpose |
 | --- | --- |
 | [`src/Product-Interview-Instructions.md`](src/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
-| [`src/Product-Definition-Aspects.md`](src/Product-Definition-Aspects.md) | Product definition aspect catalog to upload as a project source. |
+| [`src/Product-Discovery-Catalog.md`](src/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
 | [`src/UX-Guide.md`](src/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
 | [`README.md`](README.md) | Project overview and getting started guide. |
 | [`TODO.md`](TODO.md) | Planned improvements and outstanding tasks. |

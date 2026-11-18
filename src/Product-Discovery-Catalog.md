@@ -1,11 +1,11 @@
-# Product Definition & Architecture Discovery Aspect Catalog
+# Product Discovery Catalog
 
-**Document ID:** PRODEF-ASP-001  
+**Document ID:** ProDisC-001  
 **Version:** 1.0  
 **Status:** Baseline for handoff  
 **Date:** 2026-11-03  
 **Language:** English  
-**Source:** Product Owner discovery checklist established in ProDef project conversation  
+**Source:** Product Owner discovery checklist established in project discovery conversation  
 
 ## Purpose of the document
 
