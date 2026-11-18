@@ -22,15 +22,17 @@ The PO is not required to choose databases, protocols, or architectural patterns
 
 ## Catalog entry priorities for the first pass
 
-1. **P0 (must be examined):** 1 Product, 2 Users, 3 Scale, 4 Functionality, 5 Data, 6 Load, 7 Clients, 8 Access, 10 Integrations, 12 Security, 14 Reliability, 24 Constraints.
-2. **P1 (check applicability):** 9 Multi-tenancy, 11 Processes, 13 Compliance, 15 Consistency, 16 Infrastructure, 17 Operations, 18 Development, 20 Analytics, 21 Notifications.
-3. **P2 (depends on product type):** 19 Billing, 22 AI/ML, 23 Migration.
+Each numbered area heading has a priority prefix immediately after its area number. Each entry in that area inherits the heading's priority:
+
+- **P0:** The area must be examined.
+- **P1:** Check whether the area applies.
+- **P2:** Applicability depends on the product type.
 
 P0 does not mean that every specific question needs a precise answer. For example, the exact RPS may be unknown, but the approximate load scale should still be established.
 
 ---
 
-## 1. Product and business context
+## 1. [P0] Product and business context
 **Goal:** understand the product's purpose, boundaries, and success criteria.
 
 1.1. What problem does the product solve?
@@ -48,7 +50,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 1.13. How is the product expected to evolve?
 1.14. Are there existing equivalents or systems whose behavior needs to be taken into account?
 
-## 2. Users and roles
+## 2. [P0] Users and roles
 **Goal:** determine who interacts with the system and which access models are needed.
 
 2.1. Who is a user of the system?
@@ -67,7 +69,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 2.14. Which interface languages are required?
 2.15. What is the users' level of technical proficiency?
 
-## 3. Scale and number of users
+## 3. [P0] Scale and number of users
 **Goal:** determine the system's scale and growth prospects.
 
 3.1. How many users are expected in total?
@@ -83,7 +85,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 3.11. Are sudden load spikes possible?
 3.12. Are there limits on the maximum number of users, organizations, or objects?
 
-## 4. Functionality and user scenarios
+## 4. [P0] Functionality and user scenarios
 **Goal:** determine exactly what the system should do.
 
 4.1. What core functions are needed?
@@ -104,7 +106,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 4.16. Which scenarios should work without human involvement?
 4.17. Which functions are mandatory for the MVP, and which can be deferred?
 
-## 5. Data and information model
+## 5. [P0] Data and information model
 **Goal:** determine the main entities, relationships, lifecycle, and data volumes.
 
 5.1. What main entities exist in the product?
@@ -130,7 +132,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 5.21. Which data is considered the source of truth?
 5.22. Which data can be recreated, and which data must not be lost?
 
-## 6. Load and performance
+## 6. [P0] Load and performance
 **Goal:** determine quantitative performance requirements.
 
 6.1. How many requests per second are expected on average (RPS)?
@@ -150,7 +152,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 6.15. How should the system behave under overload?
 6.16. Which functions may slow down during peaks, and which may not?
 
-## 7. Client applications and interfaces
+## 7. [P0] Client applications and interfaces
 **Goal:** determine the necessary ways of interacting with the system.
 
 7.1. Which client applications are needed: web, mobile, desktop, CLI?
@@ -168,7 +170,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 7.13. Are there visual style requirements or an existing design system?
 7.14. Should multiple users see each other's changes in real time?
 
-## 8. Identification, authentication, and authorization
+## 8. [P0] Identification, authentication, and authorization
 **Goal:** determine the identity and access management model.
 
 8.1. Do users need to be identified?
@@ -190,7 +192,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 8.17. Are service accounts and machine authentication needed?
 8.18. Which actions require identity to be reconfirmed?
 
-## 9. Organizations and tenant isolation
+## 9. [P1] Organizations and tenant isolation
 **Goal:** determine the multi-tenancy model.
 
 9.1. Does the product serve one organization or multiple independent clients?
@@ -206,7 +208,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 9.11. Are individual resource limits needed?
 9.12. Can a client export all their data and leave the platform?
 
-## 10. Integrations and external systems
+## 10. [P0] Integrations and external systems
 **Goal:** determine dependencies on other systems.
 
 10.1. Which systems require integration?
@@ -225,7 +227,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 10.14. Which integrations are mandatory for launch?
 10.15. Who is responsible for the quality and availability of external data?
 
-## 11. Business processes and automation
+## 11. [P1] Business processes and automation
 **Goal:** determine complex processes and their coordination.
 
 11.1. Which processes consist of multiple steps?
@@ -243,7 +245,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 11.13. Is execution status tracking required?
 11.14. Can business processes be configured by users?
 
-## 12. Security and privacy
+## 12. [P0] Security and privacy
 **Goal:** determine requirements for protecting the product and data.
 
 12.1. Which data requires special protection?
@@ -262,7 +264,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 12.14. Are there security requirements for third-party integrations?
 12.15. What are the requirements for security checks before release?
 
-## 13. Legislation and compliance
+## 13. [P1] Legislation and compliance
 **Goal:** determine legal and industry constraints.
 
 13.1. In which countries will the product be available?
@@ -278,7 +280,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 13.11. Is confirmation of compliance by auditors required?
 13.12. What legal restrictions apply to the use of third-party services and AI?
 
-## 14. Availability, reliability, and recovery
+## 14. [P0] Availability, reliability, and recovery
 **Goal:** determine how resilient the system must be.
 
 14.1. What level of availability is required: 99%, 99.9%, 99.99%?
@@ -296,7 +298,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 14.13. Are scheduled maintenance windows acceptable?
 14.14. What are the requirements for preserving operations during failures?
 
-## 15. Consistency and concurrent work
+## 15. [P1] Consistency and concurrent work
 **Goal:** determine requirements for operation correctness and collaboration.
 
 15.1. Can multiple users modify the same object simultaneously?
@@ -312,7 +314,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 15.11. Is temporary inconsistency between systems acceptable?
 15.12. What are the transactionality requirements for business operations?
 
-## 16. Deployment and infrastructure
+## 16. [P1] Deployment and infrastructure
 **Goal:** determine hosting and operating conditions.
 
 16.1. Where should the system run: cloud, on-premises, hybrid?
@@ -330,7 +332,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 16.13. Are there requirements for portability between providers?
 16.14. How should updates be performed without stopping the service?
 
-## 17. Operations, monitoring, and support
+## 17. [P1] Operations, monitoring, and support
 **Goal:** determine how the product will be maintained after launch.
 
 17.1. Who will operate the system?
@@ -348,7 +350,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 17.13. How will infrastructure costs be controlled?
 17.14. Are system status reports for clients needed?
 
-## 18. Development, testing, and delivery
+## 18. [P1] Development, testing, and delivery
 **Goal:** determine constraints on the product development process.
 
 18.1. Who develops the system?
@@ -368,7 +370,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 18.15. Is backward compatibility required during updates?
 18.16. Are there restrictions on licenses and the use of open source?
 
-## 19. Monetization, pricing plans, and billing
+## 19. [P2] Monetization, pricing plans, and billing
 **Goal:** determine commercial mechanisms if they are part of the product.
 
 19.1. How does the product earn money?
@@ -384,7 +386,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 19.11. How are pricing plan changes handled?
 19.12. Are individual commercial terms required for clients?
 
-## 20. Analytics and reporting
+## 20. [P1] Analytics and reporting
 **Goal:** determine what data is needed for decision-making and monitoring product operation.
 
 20.1. Which product metrics are needed?
@@ -400,7 +402,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 20.11. Which data must not be collected for analytics?
 20.12. Are forecasting and anomaly detection needed?
 
-## 21. Notifications and communications
+## 21. [P1] Notifications and communications
 **Goal:** determine ways of informing users.
 
 21.1. Which events should trigger notifications?
@@ -416,7 +418,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 21.11. Are messages between users needed?
 21.12. Is a communication history required?
 
-## 22. AI, ML, and automated agents
+## 22. [P2] AI, ML, and automated agents
 **Goal:** determine requirements for intelligent functions if they are planned.
 
 22.1. Which tasks should be solved using AI/ML?
@@ -438,7 +440,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 22.17. What restrictions and permissions apply to agents?
 22.18. How are unwanted automated actions prevented?
 
-## 23. Migration and compatibility
+## 23. [P2] Migration and compatibility
 **Goal:** determine requirements when replacing or extending existing systems.
 
 23.1. Is there a previous version of the product?
@@ -454,7 +456,7 @@ P0 does not mean that every specific question needs a precise answer. For exampl
 23.11. Who is responsible for the quality of the source data?
 23.12. When can the old system be shut down?
 
-## 24. Constraints, trade-offs, and priorities
+## 24. [P0] Constraints, trade-offs, and priorities
 **Goal:** identify factors that determine the architecture more strongly than individual functions.
 
 24.1. Which requirements are absolutely mandatory?
