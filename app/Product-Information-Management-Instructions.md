@@ -26,18 +26,18 @@ Proposals and assumptions become confirmed decisions only when confirmed by an a
 
 Within `OutputDocuments`:
 
-1. Store the current Q&A registry in `qa-registry.json`, the Source Registry in `source-registry.md`, and the Coverage Map in `coverage-map.md`.
-2. Initialize the Q&A registry with a product ID and an empty records array. Add prepared questions, open questions, and source-supported proposed answers without treating proposals as confirmed decisions.
+1. Use the product's existing unified Product Information Registry for questions and decisions; if none is configured, use `product-information-registry.json` in `OutputDocuments`. Store the Source Registry in `source-registry.md` and the Coverage Map in `coverage-map.md`.
+2. Initialize a new product information registry with a product ID and an empty records array only after checking for existing product artifacts and following the migration rules. Add prepared questions, open questions, and source-supported proposed answers without treating proposals as confirmed decisions.
 3. Record input sources in the Source Registry and initialize catalog areas as not examined in the Coverage Map. Update the Source Registry when sources change and reassess coverage after each round.
-4. Save full Q&A registry snapshots in `snapshots/`, using a new sequential filename for each completed round.
+4. Save full product information registry snapshots in `snapshots/` next to the registry, using a new sequential filename for each completed round and after registry records change outside a round.
 
 ## 6. Traceability
 
-Follow [Artifact-Data-Formats.md](Artifact-Data-Formats.md) as the authoritative reference for Q&A registry fields, formats, statuses, and storage rules.
+Follow [Artifact-Data-Formats.md](Artifact-Data-Formats.md) as the authoritative reference for product information registry fields, formats, statuses, and storage rules.
 
-1. Never invent or assume product decisions. Distinguish confirmed requirements, inferences, and interviewer assumptions; inferences and assumptions do not become product decisions without the owner's confirmation.
-2. Track confirmed, unconfirmed, unknown, and conflicting information. Only explicit owner input confirms decisions.
-3. Identify questions according to the registry rules. Give each decision a stable ID, link it to its source answer or direct statement, and retain superseded decisions.
+1. Never invent or assume product decisions. Distinguish confirmed requirements, inferences, and interviewer assumptions; inferences and assumptions do not become product decisions without confirmation by the responsible actor or an explicitly authorized delegate.
+2. Track confirmed, unconfirmed, unknown, and conflicting information. Record direct owner answers as given, retaining tentative wording. An authorized owner's clear decision is confirmed without a second confirmation; answer completeness alone does not confirm a proposal or verify a fact.
+3. Identify questions according to the registry rules. Give each decision a stable ID, link it to all source answers or direct statements, and retain superseded decisions. Record useful agent interpretations separately in `interpreted_as` and `interpretation_note`; they do not change the owner's answer or confer approval. Clarify material uncertainty and record the owner's corrections.
 4. Label assistant ideas as proposals until approved. Track products separately.
 5. Record each established requirement separately using the [Requirements Registry Record Structure](Artifact-Data-Formats.md#requirements-registry-record-structure).
 
@@ -49,4 +49,4 @@ When the owner requests a product specification, compile a structured document i
 
 Actors may identify gaps, contradictions, blockers, and uncertainties in upstream requirements and stage documents. Within their authority, they may independently make decisions that resolve these issues or substantially reduce uncertainty, provided those decisions introduce no new conflicts or other issues. Routine execution choices within confirmed requirements and constraints do not require individual records.
 
-If a proposed decision would introduce new issues, including conflicts or uncertainties, record it as a proposal in the Decision Registry and refer it to the responsible actors. Actors with Stakeholder Authority may mandate acceptance despite existing requirement conflicts; the actors responsible for the affected requirements must then resolve those conflicts.
+If a proposed decision would introduce new issues, including conflicts or uncertainties, record it as a proposal in the Product Information Registry and refer it to the responsible actors. Actors with Stakeholder Authority may mandate acceptance despite existing requirement conflicts; the actors responsible for the affected requirements must then resolve those conflicts.

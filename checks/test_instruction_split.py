@@ -47,10 +47,10 @@ class InstructionSplitTest(unittest.TestCase):
             self.assertIn("Product-Information-Management-Instructions.md", entry)
         self.assertIn("Product-Information-Management-Instructions.md#8-decision-management-and-conflict-resolution", formats)
         for rule in (
-            "Follow [Artifact-Data-Formats.md](Artifact-Data-Formats.md) as the authoritative reference for Q&A registry fields, formats, statuses, and storage rules",
+            "Follow [Artifact-Data-Formats.md](Artifact-Data-Formats.md) as the authoritative reference for product information registry fields, formats, statuses, and storage rules",
             "Others must not change an owned item without the owner's authorization",
             "An actor may confirm an item on another actor's behalf only with that actor's explicit delegation",
-            "Store the current Q&A registry in `qa-registry.json`",
+            "use `product-information-registry.json` in `OutputDocuments`",
             "using a new sequential filename for each completed round",
             "without treating proposals as confirmed decisions",
             "Record each established requirement separately",

@@ -9,12 +9,12 @@ On request, the assistant compiles a structured Product Specification from confi
 ---
 ## Delivery artifacts
 
-[`app/`](app/) contains the interview instructions, artifact formats and UX guide; [`stages/`](stages/) contains the stage instructions and discovery catalog. Add the files from both folders to your ChatGPT project sources, then use the setup text below as the Project instructions.
+[`app/`](app/) contains the interview instructions, artifact formats and UX guide; [`stages/`](stages/) contains stage instructions and reusable resources. Add the applicable instructions and resources to your ChatGPT project sources, then use the setup text below as the Project instructions. Project-specific inputs and outputs may contain sensitive information; include them only when needed and authorized.
 
 ## Getting started guide
 
 1. In ChatGPT, create a new project or open the project you want to use for product definition.
-2. Add **all files from [`app/`](app/) and [`stages/`](stages/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Information-Management-Instructions.md`, `Artifact-Data-Formats.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
+2. Add the applicable files from [`app/`](app/) and the relevant stage instructions and resources, keeping their filenames unchanged. For discovery, include `Product-Interview-Instructions.md`, `Product-Information-Management-Instructions.md`, `Artifact-Data-Formats.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`. Add project-specific inputs and outputs only when needed and authorized.
 3. Open the project's menu and find its settings or instructions editor (the label may vary by interface).
 4. Paste the text below into **Project instructions** and save your changes.
 5. Start a new chat inside that project and describe your product idea to begin the Q&A interview.
@@ -28,7 +28,7 @@ Read and apply the supporting documents it references, including Product-Discove
 
 If a required file is missing or unreadable, tell the user which file is unavailable and ask for it. Do not invent its contents or claim to have followed it.
 
-Treat the user's explicit decisions as authoritative. Never treat suggested answers, inferences or assumptions as confirmed decisions without the user's confirmation.
+Treat explicit decisions by an actor with the necessary authority, or an explicitly authorized delegate, as confirmed. Never treat suggested answers, inferences or assumptions as confirmed decisions without authorized confirmation.
 ```
 
 Project instructions apply across chats within that project. See the [official ChatGPT Projects guide](https://learn.chatgpt.com/docs/projects) for more information.

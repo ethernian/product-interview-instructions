@@ -10,6 +10,7 @@ When the stakeholder asks to run discovery, read and follow [Product Interview I
 - Solution Library: `resources/` (including the discovery interview catalog `Product-Discovery-Catalog.md` and any other applicable guidance).
 - ProcessDescription: `README.md` and `../Product-Development-Handbook.md#stage-overview`.
 - OutputDocuments: `outputs/`.
+- ProductInformationRegistry: the project-configured shared registry path, if any; otherwise locate existing product artifacts before defaulting to `outputs/product-information-registry.json`.
 
 Read the existing inputs before asking for additional material. Report any input that cannot be read. Treat source claims and technical proposals as unconfirmed until the stakeholder confirms them.
 

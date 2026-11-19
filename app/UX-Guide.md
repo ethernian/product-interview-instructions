@@ -25,14 +25,15 @@ For each question, provide three mutually exclusive options:
 - **Defer**: Postpone the question without treating its proposed answer as confirmed.
 
 Do not treat a proposed answer as confirmed until the Product Owner explicitly accepts it.
+Allow the owner to provide a direct answer when no proposal exists, including "I don't know" or a tentative answer. Keep an answer's submission separate from approval of any choices it merely proposes; make consequential interpretations and proposed decisions visible for correction or confirmation by an authorized actor. Do not require a second confirmation for a clear decision made directly by its authorized owner.
 
 ### 4. Round submission
 - Present all questions in a consistent vertical layout, with clear separation between questions.
 - Provide an optional field for general comments.
-- Include a single **"Submit Decisions"** button at the end of the round.
+- Include a single **"Submit Round"** button at the end of the round. Submission alone does not confirm a proposed decision.
 - Preserve the Product Owner's selections and modifications when submitting the round.
 - Allow deferred questions without requiring an answer.
-- After submission, follow [Round completion](Product-Interview-Instructions.md#round-completion): review answers for completeness and best-practice alignment, publish the round summary, and save and link a new Q&A registry snapshot before continuing according to the coverage priorities.
+- After submission, follow [Round completion](Product-Interview-Instructions.md#round-completion): review answers for completeness and best-practice alignment, publish the round summary, and save and link a new Product Information Registry snapshot before continuing according to the coverage priorities.
 
 ### 5. Visual consistency
 - Use the same question layout, aspect reference styling, badge placement, confirmation controls, and spacing across all interview rounds.

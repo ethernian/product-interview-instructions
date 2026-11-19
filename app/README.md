@@ -53,11 +53,12 @@ Set these locations for the selected scope before starting. State how relative p
 | Solution library | [Path to applicable project-provided guidance and resources] |
 | Process description | [Path or description of the process to be supported] |
 | Output documents | [Directory for artifacts for this scope] |
+| Product information registry | [Shared registry path, or state that the interview should locate existing artifacts before using the output-directory default] |
 | Existing artifacts to resume | [Paths, or state that none exist] |
 
 Map these locations to the interview arguments `Input Documents`, `Solution Library`, `ProcessDescription`, and `OutputDocuments` in the project's invocation instructions. Read available inputs before requesting more, report unreadable inputs, and resume existing artifacts instead of overwriting them.
 
-The interview maintains `qa-registry.json`, `source-registry.md`, `coverage-map.md`, and sequential full Q&A registry snapshots under `snapshots/` in its output directory. Follow the artifact formats and information management instructions for contents, statuses, storage, and fallback behavior. Record requirements and decisions in their respective registries using the documented structures. [Identify the locations of existing requirements and decision registries, if any.]
+The project maintains one `product-information-registry.json` for questions and decisions across stages, plus `source-registry.md`, `coverage-map.md`, and sequential full registry snapshots under `snapshots/`. Configure the shared registry location; the interview defaults it to its output directory when none exists. Follow the artifact formats and information management instructions for contents, statuses, migration, storage, and fallback behavior. Requirements retain their own registry. [Identify existing product information and requirements registries, including any legacy Q&A or decision registry, if any.]
 
 ## Working process
 
