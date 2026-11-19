@@ -6,6 +6,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class InstructionSplitTest(unittest.TestCase):
+    def test_processing_priorities_are_preserved_and_referenced(self):
+        handbook = (ROOT / "stages/Product-Development-Handbook.md").read_text()
+        instructions = (ROOT / "app/Product-Information-Management-Instructions.md").read_text()
+        self.assertIn("Product-Information-Management-Instructions.md#processing-priorities", handbook)
+        section = instructions.split("## Processing Priorities", 1)[1].split("## ", 1)[0]
+        for rule in (
+            "Prioritize questions and requests that significantly affect dependent decisions. Record unknown parameters explicitly.",
+            "Identify contradictions and costly-to-change decisions before executing dependent work.",
+            "AI Agents take on the largest possible share of necessary work within their capabilities and authority. Involve Human Actors only when their information, judgment, or authority is needed, while minimizing the effort required from them.",
+            "Eliminate independently maintained duplicates of information. Enable automatic updates of dependent artifacts.",
+        ):
+            with self.subTest(rule=rule):
+                self.assertIn(rule, section)
+                self.assertNotIn(rule, handbook)
+
     def test_moved_rules_remain_reachable_and_keep_their_guards(self):
         interview = (ROOT / "app/Product-Interview-Instructions.md").read_text()
         handbook = (ROOT / "stages/Product-Development-Handbook.md").read_text()

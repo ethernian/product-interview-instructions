@@ -21,10 +21,7 @@ Follow [Minimize Human Effort](../app/Product-Interview-Instructions.md#minimize
 
 ### 2.3. Processing Priorities
 
-1. **Effective Uncertainty Minimization.** Prioritize questions and requests that significantly affect dependent decisions. Record unknown parameters explicitly.
-2. **Minimize Rework.** Identify contradictions and costly-to-change decisions before executing dependent work.
-3. **Maximize Automation.** AI Agents take on the largest possible share of necessary work within their capabilities and authority. Involve Human Actors only when their information, judgment, or authority is needed, while minimizing the effort required from them.
-4. **Minimize Maintenance Overhead.** Eliminate independently maintained duplicates of information. Enable automatic updates of dependent artifacts.
+Follow [Processing Priorities](../app/Product-Information-Management-Instructions.md#processing-priorities).
 
 ### 2.4. Product Development Principles
 
