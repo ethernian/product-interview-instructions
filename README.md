@@ -42,7 +42,7 @@ To start or resume a stage with a repository-aware agent, ask it to `run <stage>
 | [`app/Product-Interview-Instructions.md`](app/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
 | [`app/Product-Information-Management-Instructions.md`](app/Product-Information-Management-Instructions.md) | Requirements, decisions, and artifact handling rules. |
 | [`app/Artifact-Data-Formats.md`](app/Artifact-Data-Formats.md) | Artifact structures and storage rules. |
-| [`stages/01-discovery/Library/Product-Discovery-Catalog.md`](stages/01-discovery/Library/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
+| [`stages/01-discovery/resources/Product-Discovery-Catalog.md`](stages/01-discovery/resources/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
 | [`app/UX-Guide.md`](app/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
 | [`README.md`](README.md) | Project overview and getting started guide. |
 | [`TODO.md`](TODO.md) | Planned improvements and outstanding tasks. |
