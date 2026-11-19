@@ -134,7 +134,7 @@ The Decision Registry is a versioned collection of Decision Records shared by al
 | Rejected | A proposal has been rejected by an actor with the necessary authority, including explicit delegation when acting on another actor's behalf |
 | Superseded | A previous decision has been replaced; its record is preserved and links to its replacement |
 
-Follow the [Decision Management rule](Product-Information-Management-Instructions.md#decision-management-and-conflict-resolution) for capturing, confirming, applying, and revising decisions. Routine execution choices within confirmed requirements and constraints do not require individual records.
+Follow the [Decision Management rule](Product-Information-Management-Instructions.md#8-decision-management-and-conflict-resolution) for capturing, confirming, applying, and revising decisions. Routine execution choices within confirmed requirements and constraints do not require individual records.
 
 ## Stage Completion Criterion Structure
 
