@@ -5,7 +5,7 @@
 
 This handbook describes a human-led, AI-assisted requirements management process focused on collecting and managing requirements throughout all stages of product development. The Process assigns as much work as possible to AI-Agents, minimizes human effort across all stages, while fully preserving humans' control over the product and their decision authority.
 
-Requirements and other work items may be owned by Human Actor, and can't be changed by others without the owner’s authorization. It enforces separation of responsibilities, avoids the excessive human effort of repeatedly revalidating items repeatedly rewritten by AI Agents, and reduces the risk of unapproved AI-generated changes to requirements.  
+Follow [Product Information Management Instructions](../app/Product-Information-Management-Instructions.md) for requirements, proposals, decisions, and related artifact handling.
 
 Read the principles first, use the process and stage descriptions to guide work, and refer to the cross-stage rules and glossary throughout. Use [Artifact Data Formats](../app/Artifact-Data-Formats.md) as the authoritative reference for record fields, status values, and storage rules.
 
@@ -13,15 +13,11 @@ Read the principles first, use the process and stage descriptions to guide work,
 
 ### 2.1. Respect Actor Authority
 
-1. **Respect Decision Authority.** Proposals and assumptions become confirmed decisions only through confirmation by an actor with the necessary authority. No actor may confirm an item in another actor's name without explicit delegation from that actor.
-2. **Use only confirmed decisions.** Decisions may guide further work only after confirmation by the responsible actor or an explicitly authorized delegate.
+Follow [Respect Actor Authority](../app/Product-Information-Management-Instructions.md#respect-actor-authority).
 
 ### 2.2. Minimize Human Effort
 
-1. **Ask only what humans must answer.** Request information from Human Actor only when it affects requirements or subsequent decisions and cannot be supplied by Process Agents, either because they lack the necessary information or authority.
-2. **Minimize the effort of answering.** Reduce the time and cognitive effort needed to understand a question, evaluate relevant information, formulate a response, and submit it.
-3. **Respect user competence.** Ask questions within the user's area of expertise. Accept "I don't know" as a valid answer. Instead of requiring unfamiliar technical decisions, ask users to evaluate consequences they can understand. For example, rather than asking a Product Owner whether a product requires IP67 protection, ask whether it needs to withstand exposure to water.
-4. **Reuse existing information.** Use available documents, previous answers, and established decisions instead of requesting the same information again.
+Follow [Minimize Human Effort](../app/Product-Interview-Instructions.md#minimize-human-effort).
 
 ### 2.3. Processing Priorities
 
@@ -33,7 +29,7 @@ Read the principles first, use the process and stage descriptions to guide work,
 ### 2.4. Product Development Principles
 
 1. **Separation of Responsibilities.** Each artifact has a single authoritative source. Source information, requirements, architecture, and implementation are maintained separately.
-2. **Question Relevance.** The Discovery Catalog is prepared in advance based on supported practices and their applicability conditions. Every question must influence requirements or subsequent decisions. The underlying practices are excluded from the interview context.
+2. **Question Relevance.** Follow [Question Relevance](../app/Product-Interview-Instructions.md#question-relevance).
 3. **Traceability.** Derived artifacts are linked to their sources through stable identifiers. These relationships are maintained when changes occur.
 4. **Verifiability.** Every output has objective verification criteria. Selected solutions include documented justification.
 5. **Controlled Uncertainty.** Missing information and contradictions block only the activities that critically depend on them.
@@ -77,8 +73,7 @@ Stages define the initial sequence but allow revisiting earlier stages and regen
 5. **Version Management.** Version artifacts and Instructions and Resources. Preserve the ability to determine which versions of inputs and rules produced each output.
 6. **Release.** Release only accepted outputs.
 7. **Feedback.** Route operational data, defects, and new needs to the appropriate stages through Change Management.
-8. Decision Management. Across all stages, Actors may identify gaps, contradictions, blockers, and uncertainties in upstream requirements and stage documents. Within their authority, they may independently make decisions to resolve these issues or substantially reduce uncertainty in requirements, provided those decisions introduce no new conflicts or other issues. Routine execution choices within confirmed requirements and constraints do not require individual records.
-9. **Conflict Resolution**. If a proposed decision would introduce new issues, such as conflicts or uncertainties, record it as a proposal in the Decision Registry and refer it to the responsible Actors for resolution. Actors with Stakeholder Authority may mandate acceptance of a decision despite existing requirement conflicts. The Actors responsible for the affected requirements must then resolve those conflicts.
+8. **Decision Management and Conflict Resolution.** Follow [Decision Management and Conflict Resolution](../app/Product-Information-Management-Instructions.md#decision-management-and-conflict-resolution).
 
 ## 6. Key Artifact Glossary
 

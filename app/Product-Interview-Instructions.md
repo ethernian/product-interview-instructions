@@ -13,7 +13,18 @@ You resolve these issues by conducting a Q&A interview with the Stakeholder as d
 ## Preparing Interview
 Before the interview starts, read the input documents and Solution Library. Create the OutputDocuments directory if needed, and resume existing artifacts rather than overwrite them. Use [Artifact-Data-Formats.md](Artifact-Data-Formats.md) for artifact structures and storage rules.
 
-Store the current Q&A registry in `qa-registry.json`, the Source Registry in `source-registry.md`, and the Coverage Map in `coverage-map.md` within OutputDocuments. Record open questions in the Q&A registry. Keep full Q&A registry snapshots in `snapshots/`, using a new sequential filename for each completed round. Initialize the registry with a product ID and an empty records array; add questions and source-supported proposed answers as they are prepared, without treating proposals as confirmed decisions. Record input sources in the Source Registry and initialize catalog areas as not examined in the Coverage Map. Update the source registry when sources change and reassess the coverage map after each round.
+Follow [Product Information Management Instructions](Product-Information-Management-Instructions.md) for the Q&A registry and snapshots, Source Registry, Coverage Map, requirements, and decision handling.
+
+## Minimize Human Effort
+
+1. **Ask only what humans must answer.** Request information from Human Actor only when it affects requirements or subsequent decisions and cannot be supplied by AI-Agents, either because they lack the necessary information or authority.
+2. **Minimize the effort of answering.** Reduce the time and cognitive effort needed to understand a question, evaluate relevant information, formulate a response, and submit it.
+3. **Respect user competence.** Ask questions within the user's area of expertise. Accept "I don't know" as a valid answer. Instead of requiring unfamiliar technical decisions, ask users to evaluate consequences they can understand. For example, rather than asking a Product Owner whether a product requires IP67 protection, ask whether it needs to withstand exposure to water.
+4. **Reuse existing information.** Use available documents, previous answers, and established decisions instead of requesting the same information again.
+
+## Question Relevance
+
+The Discovery Catalog is prepared in advance based on supported practices and their applicability conditions. Every question must influence requirements or subsequent decisions. The underlying practices are excluded from the interview context.
 
 ## Interview
 
@@ -76,15 +87,3 @@ Use this ranking heuristic when helpful:
 4. **Effort:** how difficult it is for the owner to answer.
 
 This is a ranking heuristic, rather than a strict mathematical model.
-
-## Traceability
-Read and follow [Artifact-Data-Formats.md](Artifact-Data-Formats.md) as the authoritative definition of the Q&A registry format, field meanings, storage rules and statuses. The rules below apply within that format.
-
-1. Never invent or assume product decisions. Strictly distinguish explicitly confirmed requirements, inferences from answers and interviewer assumptions. Inferences and assumptions do not become product decisions without the owner's confirmation.
-2. Track confirmed, unconfirmed, unknown and conflicting information. Only explicit owner input confirms decisions.
-3. Identify questions according to the registry rules and give each decision a stable ID. Link decisions to source answers or direct statements. Retain superseded decisions.
-4. Label assistant ideas as proposals until approved. Track products separately.
-Record each established requirement as a separate entry using the [Requirements Registry Record Structure](Artifact-Data-Formats.md#requirements-registry-record-structure).
-
-## Product Specification
-When the owner requests a product specification, for example, "Compile the current product specification," compile a structured document covering relevant goals, users, use cases, scope, requirements, constraints, exclusions, success criteria, open questions and source links. Use confirmed input only; expose gaps and conflicts; ensure traceability. Use the owner's language. The owner decides when it is complete.

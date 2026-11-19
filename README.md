@@ -14,7 +14,7 @@ On request, the assistant compiles a structured Product Specification from confi
 ## Getting started guide
 
 1. In ChatGPT, create a new project or open the project you want to use for product definition.
-2. Add **all files from [`app/`](app/) and [`stages/`](stages/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Artifact-Data-Formats.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
+2. Add **all files from [`app/`](app/) and [`stages/`](stages/)** to the project's sources, keeping their filenames unchanged. This includes `Product-Interview-Instructions.md`, `Product-Information-Management-Instructions.md`, `Artifact-Data-Formats.md`, `Product-Discovery-Catalog.md` and `UX-Guide.md`.
 3. Open the project's menu and find its settings or instructions editor (the label may vary by interface).
 4. Paste the text below into **Project instructions** and save your changes.
 5. Start a new chat inside that project and describe your product idea to begin the Q&A interview.
@@ -40,6 +40,7 @@ To start or resume a stage with a repository-aware agent, ask it to `run <stage>
 | File | Purpose |
 | --- | --- |
 | [`app/Product-Interview-Instructions.md`](app/Product-Interview-Instructions.md) | Interview rules to upload as a project source. |
+| [`app/Product-Information-Management-Instructions.md`](app/Product-Information-Management-Instructions.md) | Requirements, decisions, and artifact handling rules. |
 | [`app/Artifact-Data-Formats.md`](app/Artifact-Data-Formats.md) | Artifact structures and storage rules. |
 | [`stages/01-discovery/Library/Product-Discovery-Catalog.md`](stages/01-discovery/Library/Product-Discovery-Catalog.md) | Product definition aspect catalog to upload as a project source. |
 | [`app/UX-Guide.md`](app/UX-Guide.md) | Interview presentation and interaction rules to upload as a project source. |
