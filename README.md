@@ -35,7 +35,9 @@ Project instructions apply across chats within that project. See the [official C
 
 ## Repository guide
 
-To start or resume a stage with a repository-aware agent, ask it to `run <stage>`, replacing `<stage>` with a directory name under `stages/` numbered `01` through `09`. The agent follows `stages/<stage>/README.md` and any stage-specific `AGENTS.md`.
+To start or resume a stage with a repository-aware agent, ask it to `run <stage>`, replacing `<stage>` with a directory name under `stages/` numbered `01` through `09`. The agent follows the [shared stage instructions](stages/README.md), then `stages/<stage>/README.md` and any stage-specific `AGENTS.md`.
+
+This repository uses its own [requirements management add-on](app/) to support its development. The [development stages](stages/) treat the add-on as the product under development. See the [discovery stage](stages/01-discovery/README.md) for details.
 
 | File | Purpose |
 | --- | --- |

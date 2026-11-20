@@ -5,6 +5,8 @@
 
 This handbook describes the product development process, its stages, their relationships, and the artifacts they produce.
 
+For common stage structure, interview invocation, and reference resolution, follow the [shared stage instructions](README.md).
+
 For core processing principles and requirements management, follow the [Product Information Management Instructions](../app/Product-Information-Management-Instructions.md) and [Product Interview Instructions](../app/Product-Interview-Instructions.md).
 
 Use the process and stage descriptions to guide work. Use [Artifact Data Formats](../app/Artifact-Data-Formats.md) as the authoritative reference for record fields, status values, and storage rules.

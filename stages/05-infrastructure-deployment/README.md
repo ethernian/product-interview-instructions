@@ -1,5 +1,7 @@
 # 05-infrastructure-deployment
 
+Follow the [shared stage instructions](../README.md).
+
 See the [Stage Overview](../Product-Development-Handbook.md#stage-overview) for this stage's purpose, inputs, activities, and outputs.
 
 **Instructions and Resources:** Templates for deploying infrastructure services, database systems, networks, storage, container configurations, and initial infrastructure setup.
